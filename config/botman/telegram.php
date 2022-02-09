@@ -12,5 +12,5 @@ return [
     |
     */
     //'token' => env('TELEGRAM_TOKEN'),
-    'token' => env('TELEGRAM_TOKEN', '5114344375:AAG0Rt1CzJh4mp6JVf1NNdzAAdYYSP9qaXQ')
+    'token' => env('TELEGRAM_TOKEN')
 ];
