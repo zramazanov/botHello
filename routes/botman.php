@@ -5,11 +5,11 @@ use App\Conversations\ExampleConversation;
 
 $botman = resolve('botman');
 
-$botman->hears('.*hi.*', function ($bot) {
-    $bot->reply('Hello!');
+$botman->hears('.*привет.*', function ($bot) {
+    $bot->reply('Привет!');
 });
-$botman->hears('.*by.*', function ($bot) {
-    $bot->reply('By!');
+$botman->hears('.*пока.*', function ($bot) {
+    $bot->reply('Пока!');
 });
 /*
 $botman->hears('/start', function (BotMan $bot) {
@@ -17,5 +17,5 @@ $botman->hears('/start', function (BotMan $bot) {
 });
 */
 $botman->fallback(function ($bot) {
-    $bot->reply('Sorry I did not understand!');
+    $bot->reply('Извините, не понял!');
 });
