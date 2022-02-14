@@ -6,6 +6,8 @@ use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
 use App\Conversations\ExampleConversation;
 
+use App\Jobs\SendMessage;
+
 class BotManController extends Controller
 {
     /**
@@ -15,7 +17,7 @@ class BotManController extends Controller
     {
         $botman = app('botman');
 
-        $botman->listen();
+        SendMessage::dispatch($botman);
     }
 
     /**
